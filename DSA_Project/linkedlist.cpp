@@ -8,7 +8,6 @@ struct Node {
     Node(int val) : data(val), next(nullptr) {}
 };
 
-// Reverse - Iterative O(n) time, O(1) space
 Node* reverseIterative(Node* head) {
     Node* prev = nullptr;
     Node* current = head;
@@ -24,7 +23,6 @@ Node* reverseIterative(Node* head) {
     return prev;
 }
 
-// Reverse - Recursive O(n) time, O(n) space
 Node* reverseRecursive(Node* head) {
     if (head == nullptr || head->next == nullptr)
         return head;
@@ -36,7 +34,6 @@ Node* reverseRecursive(Node* head) {
     return newHead;
 }
 
-// Cycle Detection - Floyd's Algorithm O(n) time, O(1) space
 bool detectCycle(Node* head) {
     if (head == nullptr) return false;
     
@@ -54,7 +51,6 @@ bool detectCycle(Node* head) {
     return false;
 }
 
-// Find Middle - Two Pointer O(n) time, O(1) space
 Node* findMiddle(Node* head) {
     if (head == nullptr) return nullptr;
     
@@ -69,5 +65,6 @@ Node* findMiddle(Node* head) {
     return slow;
 
 }
+
 
 
