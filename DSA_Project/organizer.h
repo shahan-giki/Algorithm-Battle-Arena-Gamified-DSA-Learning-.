@@ -1,6 +1,3 @@
-// organizer.h - Organizer Panel for System Management
-// Demonstrates: File I/O, Data Management
-
 #ifndef ORGANIZER_H
 #define ORGANIZER_H
 
@@ -25,7 +22,6 @@ private:
     vector<Algorithm> availableAlgorithms;
     
     void loadAlgorithms() {
-        // Load predefined algorithms
         availableAlgorithms = {
             {"QuickSort", "sorting", "algorithms/sorting.cpp"},
             {"MergeSort", "sorting", "algorithms/sorting.cpp"},
@@ -117,14 +113,12 @@ public:
     }
     
     void removeContestant(string id) {
-        // Implementation for removing contestants
         cout << " Contestant '" << id << "' removed successfully!\n";
     }
     
     void showPanel() {
         int choice;
         do {
-            //clearScreen();
             cout << "============================================================ \n";
             cout << "                   ORGANIZER PANEL                            \n";
             cout << "=============================================================\n";
@@ -189,4 +183,5 @@ public:
     }
 };
 
-#endif // ORGANIZER_H
+
+#endif
