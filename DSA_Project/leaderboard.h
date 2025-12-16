@@ -82,7 +82,10 @@ void showAlgorithmStats() {
         [](const LeaderboardEntry& a, const LeaderboardEntry& b) {
             return a.score > b.score;
         });
-    
+    if (entries.empty()) {
+        cout << "No performance records found!\n";
+        return;
+    }
     cout << left << setw(6) << "Rank" << setw(30) << "Algorithm" 
          << setw(10) << "Score" << "Date\n";
     cout << "------------------------------------------------------------\n";
