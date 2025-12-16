@@ -1,6 +1,3 @@
-// utils.h - Utility Functions
-// Cross-platform helpers
-
 #ifndef UTILS_H
 #define UTILS_H
 
@@ -34,14 +31,12 @@ void sleep_ms(int milliseconds) {
 }
 
 bool initializeSystem() {
-    // Create data directory if it doesn't exist
     #ifdef _WIN32
     system("if not exist data mkdir data");
     #else
     system("mkdir -p data");
     #endif
     
-    // Create necessary files if they don't exist
     ofstream leaderboard("data/leaderboard.txt", ios::app);
     ofstream contestants("data/contestants.txt", ios::app);
     ofstream tournament("data/tournament_results.txt", ios::app);
@@ -53,4 +48,5 @@ bool initializeSystem() {
     return true;
 }
 
-#endif // UTILS_H
+
+#endif 
