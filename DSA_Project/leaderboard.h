@@ -48,3 +48,37 @@ void showTournamentLeaderboard() {
         cout << "No champions recorded yet!\n";
     }
 }
+void showAlgorithmStats() {
+    clearScreen();
+    ;
+    cout << "          ALGORITHM PERFORMANCE STATISTICS                  \n";
+    cout << "\n\n";
+    
+    vector<LeaderboardEntry> entries;
+    
+    ifstream file("data/leaderboard.txt");
+    if (!file.is_open()) {
+        cout << "No algorithm performance data available yet.\n";
+        return;
+    }
+    
+    string line;
+    while (getline(file, line)) {
+        // Parse CSV: algorithm,score,date
+        size_t pos1 = line.find(',');
+        size_t pos2 = line.find(',', pos1 + 1);
+        
+        if (pos1 != string::npos && pos2 != string::npos) {
+            LeaderboardEntry entry;
+            entry.name = line.substr(0, pos1);
+            entry.score = stoi(line.substr(pos1 + 1, pos2 - pos1 - 1));
+            entry.date = line.substr(pos2 + 1);
+            entries.push_back(entry);
+        }
+    }
+    file.close();
+    
+    if (entries.empty()) {
+        cout << "No performance records found!\n";
+        return;
+    }
