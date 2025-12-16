@@ -1,0 +1,30 @@
+==========================================
+Tournament ID: T1765902806
+Date: Tue Dec 16 21:33:26 2025
+Contestants: 4
+Rounds: 10
+------------------------------------------
+CHAMPION: Contestant_3
+Final Score: 1314
+------------------------------------------
+Final Standings:
+1. Contestant_3 - 1314 points
+2. Contestant_1 - 1299 points
+3. Contestant_4 - 1295 points
+==========================================
+
+==========================================
+Tournament ID: T1765906079
+Date: Tue Dec 16 22:27:59 2025
+Contestants: 6
+Rounds: 10
+------------------------------------------
+CHAMPION: Contestant_6
+Final Score: 1307
+------------------------------------------
+Final Standings:
+1. Contestant_6 - 1307 points
+2. Contestant_1 - 1298 points
+3. Contestant_3 - 1290 points
+==========================================
+
