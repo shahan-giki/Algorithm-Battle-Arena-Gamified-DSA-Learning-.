@@ -1,6 +1,3 @@
-// contestant.h - Contestant Class
-// Demonstrates: Object-Oriented Design, Data Encapsulation
-
 #ifndef CONTESTANT_H
 #define CONTESTANT_H
 
@@ -18,7 +15,7 @@ private:
     int totalScore;
     int finaleScore;
     int finalScore;
-    vector<int> roundScores;  // DSA: Dynamic array for score tracking
+    vector<int> roundScores;
     
 public:
     Contestant(string contestantID, string contestantName) {
@@ -38,13 +35,11 @@ public:
     
     double getAverageScore() const {
         if (roundScores.empty()) return 0.0;
-        // DSA: Accumulation algorithm
         return static_cast<double>(totalScore) / roundScores.size();
     }
     
-    // Setters
     void addRoundScore(int score) {
-        roundScores.push_back(score);  // DSA: Vector push_back O(1) amortized
+        roundScores.push_back(score); 
         totalScore += score;
     }
     
@@ -56,7 +51,6 @@ public:
         finalScore = totalScore + finaleScore;
     }
     
-    // Display contestant info
     void displayInfo() const {
         cout << "ID: " << id << "\n";
         cout << "Name: " << name << "\n";
@@ -65,5 +59,3 @@ public:
         cout << "Average Score: " << getAverageScore() << "\n";
     }
 };
-
-#endif // CONTESTANT_H
