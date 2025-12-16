@@ -77,6 +77,27 @@ void showAlgorithmStats() {
         }
     }
     file.close();
+// DSA Application: Sort by score (descending)
+    sort(entries.begin(), entries.end(),
+        [](const LeaderboardEntry& a, const LeaderboardEntry& b) {
+            return a.score > b.score;
+        });
+    
+    cout << left << setw(6) << "Rank" << setw(30) << "Algorithm" 
+         << setw(10) << "Score" << "Date\n";
+    cout << "------------------------------------------------------------\n";
+    
+    for (size_t i = 0; i < min(entries.size(), size_t(15)); i++) {
+        cout << left << setw(6) << (i+1)
+             << setw(30) << entries[i].name
+             << setw(10) << entries[i].score
+             << entries[i].date;
+    }
+    
+    cout << "\nTotal Battles: " << entries.size() << "\n";
+}
+
+#endif // LEADERBOARD_H
     
     if (entries.empty()) {
         cout << "No performance records found!\n";
