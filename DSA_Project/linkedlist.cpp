@@ -1,4 +1,3 @@
-// Linked List Algorithms Implementation
 #include <iostream>
 
 using namespace std;
@@ -68,4 +67,5 @@ Node* findMiddle(Node* head) {
     }
     
     return slow;
+
 }
