@@ -1,11 +1,9 @@
-// Sorting Algorithms Implementation
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
-// QuickSort - O(n log n) average, O(n²) worst
 int partition(vector<int>& arr, int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
@@ -28,7 +26,6 @@ void quickSort(vector<int>& arr, int low, int high) {
     }
 }
 
-// MergeSort - O(n log n) always
 void merge(vector<int>& arr, int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
@@ -75,7 +72,6 @@ void mergeSort(vector<int>& arr, int left, int right) {
     }
 }
 
-// BubbleSort - O(n²)
 void bubbleSort(vector<int>& arr) {
     int n = arr.size();
     for (int i = 0; i < n - 1; i++) {
@@ -85,4 +81,5 @@ void bubbleSort(vector<int>& arr) {
             }
         }
     }
+
 }
