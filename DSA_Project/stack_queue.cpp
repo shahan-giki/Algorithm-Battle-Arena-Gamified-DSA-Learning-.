@@ -1,4 +1,3 @@
-// Stack and Queue Algorithms Implementation
 #include <iostream>
 #include <stack>
 #include <queue>
@@ -6,7 +5,6 @@
 
 using namespace std;
 
-// Balanced Parentheses - O(n) time, O(n) space
 bool isBalanced(string str) {
     stack<char> s;
 
@@ -30,7 +28,6 @@ bool isBalanced(string str) {
     return s.empty();
 }
 
-// Queue using Two Stacks - O(1) amortized
 class QueueUsingStacks {
 private:
     stack<int> s1, s2;
@@ -58,3 +55,4 @@ public:
         return val;
     }
 };
+
